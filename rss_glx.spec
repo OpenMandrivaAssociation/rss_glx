@@ -24,7 +24,7 @@ License:	GPL
 Group:		Graphical desktop/Other
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		http://rss-glx.sourceforge.net/
-BuildRequires:	XFree86-devel
+BuildRequires:	X11-devel
 BuildRequires:	libopenal-devel
 BuildRequires:	libglew-devel
 BuildRequires:	libmesaglut-devel

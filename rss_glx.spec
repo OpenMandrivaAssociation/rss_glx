@@ -22,6 +22,7 @@ Patch: rss-glx_0.8.1-desktopentry.patch
 Patch1:		rss-glx_0.8.0-assert.patch
 License:	GPL
 Group:		Graphical desktop/Other
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		http://rss-glx.sourceforge.net/
 BuildRequires:	X11-devel
 BuildRequires:	libopenal-devel

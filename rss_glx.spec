@@ -2,7 +2,7 @@
 %define	oname	rss-glx
 %define	fname	%{oname}_%{version}
 %define	version	0.8.1
-%define	release	%mkrel 7
+%define	release	%mkrel 8
 %define	build_optimization 0
 %define	build_plf 0
 %{?_with_optimization: %{expand: %%global build_optimization 1}}

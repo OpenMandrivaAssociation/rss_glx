@@ -70,7 +70,7 @@ images that are similar to those from the Matrix movies.
  --with-configdir=%_datadir/xscreensaver/config \
  --bindir=%_libexecdir/xscreensaver \
  --with-kdessconfigdir=%_datadir/applnk/System/ScreenSavers/
-%make CXXFLAGS="$RPM_OPT_FLAGS"
+%make CXXFLAGS="$RPM_OPT_FLAGS" CPPFLAGS="-I%_includedir/ImageMagick"
 
 %install
 rm -rf $RPM_BUILD_ROOT

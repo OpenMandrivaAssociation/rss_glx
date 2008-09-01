@@ -1,8 +1,8 @@
 %define	name	rss_glx
 %define	oname	rss-glx
 %define	fname	%{oname}_%{version}
-%define	version	0.8.1
-%define	release	%mkrel 11
+%define	version	0.8.2
+%define	release	%mkrel 1
 %define	build_optimization 0
 %define	build_plf 0
 %{?_with_optimization: %{expand: %%global build_optimization 1}}
@@ -20,7 +20,8 @@ Release:	%{release}
 Source0:	%fname.tar.bz2
 Patch: rss-glx_0.8.1-desktopentry.patch
 Patch1:		rss-glx_0.8.0-assert.patch
-License:	GPL
+Patch2:		rss-glx_0.8.2-missing-header.patch
+License:	GPLv2
 Group:		Graphical desktop/Other
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		http://rss-glx.sourceforge.net/
@@ -61,6 +62,7 @@ images that are similar to those from the Matrix movies.
 %setup -q -n %fname
 %patch -p1 -b .desktopentry
 %patch1 -p1 -b .header
+%patch2 -p1
 
 %build
 %configure2_5x \

@@ -26,7 +26,7 @@ Group:		Graphical desktop/Other
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		http://rss-glx.sourceforge.net/
 BuildRequires:	X11-devel
-BuildRequires:	libopenal-devel
+BuildRequires:	libfreealut-devel
 BuildRequires:	libglew-devel
 BuildRequires:	libmesaglut-devel
 BuildRequires:	libMagick-devel >= 5.5.7

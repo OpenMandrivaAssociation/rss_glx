@@ -29,7 +29,7 @@ BuildRequires:	X11-devel
 BuildRequires:	libfreealut-devel
 BuildRequires:	libglew-devel
 BuildRequires:	libmesaglut-devel
-BuildRequires:	libMagick-devel >= 5.5.7
+BuildRequires:	imagemagick-devel >= 5.5.7
 BuildRequires:	chrpath
 Requires:	xscreensaver
 Epoch:		1

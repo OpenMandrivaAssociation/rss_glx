@@ -2,10 +2,8 @@
 %define	oname	rss-glx
 %define	fname	%{oname}_%{version}
 %define	version	0.8.2
-%define	release	%mkrel 1
-%define	build_optimization 0
+%define	release	%mkrel 2
 %define	build_plf 0
-%{?_with_optimization: %{expand: %%global build_optimization 1}}
 %{?_with_plf: %{expand: %%global build_plf 1}}
 
 
@@ -19,8 +17,8 @@ Version:	%{version}
 Release:	%{release}
 Source0:	%fname.tar.bz2
 Patch: rss-glx_0.8.1-desktopentry.patch
-Patch1:		rss-glx_0.8.0-assert.patch
 Patch2:		rss-glx_0.8.2-missing-header.patch
+Patch3: rss-glx_0.8.2-format-strings.patch
 License:	GPLv2
 Group:		Graphical desktop/Other
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -61,14 +59,12 @@ images that are similar to those from the Matrix movies.
 %prep
 %setup -q -n %fname
 %patch -p1 -b .desktopentry
-%patch1 -p1 -b .header
 %patch2 -p1
+%patch3 -p1
+autoreconf -fi
 
 %build
 %configure2_5x \
-%if ! %build_optimization
- --disable-sse --disable-3dnow \
-%endif
  --with-configdir=%_datadir/xscreensaver/config \
  --bindir=%_libexecdir/xscreensaver \
  --with-kdessconfigdir=%_datadir/applnk/System/ScreenSavers/

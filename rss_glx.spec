@@ -2,7 +2,7 @@
 %define	oname	rss-glx
 %define	fname	%{oname}_%{version}
 %define	version	0.8.2
-%define	release	%mkrel 2
+%define	release	%mkrel 3
 %define	build_plf 0
 %{?_with_plf: %{expand: %%global build_plf 1}}
 

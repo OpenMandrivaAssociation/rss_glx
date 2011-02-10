@@ -2,7 +2,7 @@
 %define	oname	rss-glx
 %define	fname	%{oname}_%{version}
 %define	version	0.8.2
-%define	release	%mkrel 4
+%define	release	%mkrel 5
 %define	build_plf 0
 %{?_with_plf: %{expand: %%global build_plf 1}}
 
@@ -23,10 +23,13 @@ License:	GPLv2
 Group:		Graphical desktop/Other
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		http://rss-glx.sourceforge.net/
-BuildRequires:	X11-devel
+BuildRequires:	libx11-devel
+BuildRequires:	openal-devel
+BuildRequires:	libxt-devel
 BuildRequires:	libfreealut-devel
 BuildRequires:	libglew-devel
-BuildRequires:	libmesaglut-devel
+BuildRequires:	libmesaglu-devel
+BuildRequires:	bzip2-devel
 BuildRequires:	imagemagick-devel >= 5.5.7
 BuildRequires:	chrpath
 Requires:	xscreensaver

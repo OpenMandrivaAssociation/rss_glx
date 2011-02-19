@@ -8,13 +8,17 @@
 
 
 %if %build_plf
+%if %mdvver >= 201100
+# make EVR of plf build higher than regular to allow update, needed with rpm5 mkrel
+%define extrarelsuffix plf
+%endif
 %define	distsuffix plf
 %endif
 
 Summary:	Really Slick Screensavers Port to GLX
 Name:		%{name}
 Version:	%{version}
-Release:	%{release}
+Release:	%{release}%{?extrarelsuffix}
 Source0:	%fname.tar.bz2
 Patch: rss-glx_0.8.1-desktopentry.patch
 Patch2:		rss-glx_0.8.2-missing-header.patch

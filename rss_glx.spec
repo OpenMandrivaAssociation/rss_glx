@@ -1,28 +1,25 @@
 %define	name	rss_glx
 %define	oname	rss-glx
 %define	fname	%{oname}_%{version}
-%define	version	0.8.2
-%define	release	%mkrel 5
+%define	version	0.9.1
+%define	release	%mkrel 1
 %define	build_plf 0
 %{?_with_plf: %{expand: %%global build_plf 1}}
 
-
 %if %build_plf
+%define	distsuffix plf
 %if %mdvver >= 201100
 # make EVR of plf build higher than regular to allow update, needed with rpm5 mkrel
 %define extrarelsuffix plf
 %endif
-%define	distsuffix plf
 %endif
 
 Summary:	Really Slick Screensavers Port to GLX
 Name:		%{name}
 Version:	%{version}
-Release:	%{release}%{?extrarelsuffix}
-Source0:	%fname.tar.bz2
-Patch: rss-glx_0.8.1-desktopentry.patch
-Patch2:		rss-glx_0.8.2-missing-header.patch
-Patch3: rss-glx_0.8.2-format-strings.patch
+Release:        %{release}%{?extrarelsuffix}
+Source0:	%{fname}.tar.bz2
+Patch1:		rss-glx_0.9.1-desktopentry.patch
 License:	GPLv2
 Group:		Graphical desktop/Other
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -64,60 +61,58 @@ This contains the matrixview screensaver. It is in PLF, as it includes
 images that are similar to those from the Matrix movies.
 
 %prep
-%setup -q -n %fname
-%patch -p1 -b .desktopentry
-%patch2 -p1
-%patch3 -p1
+%setup -q -n %{fname}
+%patch1 -p1 -b .desktopentry
 autoreconf -fi
 
 %build
 %configure2_5x \
- --with-configdir=%_datadir/xscreensaver/config \
- --bindir=%_libexecdir/xscreensaver \
- --with-kdessconfigdir=%_datadir/applnk/System/ScreenSavers/
-%make CXXFLAGS="$RPM_OPT_FLAGS" CPPFLAGS="-I%_includedir/ImageMagick"
+ --with-configdir=%{_datadir}/xscreensaver/config \
+ --bindir=%{_libexecdir}/xscreensaver \
+ --with-kdessconfigdir=%{_datadir}/applnk/System/ScreenSavers/
+%make CXXFLAGS="%{optflags}" CPPFLAGS="-I%{_includedir}/ImageMagick"
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall_std
 # we don't need the static libs
-rm -rf %buildroot%_libdir/lib*a
+rm -rf %{buildroot}%{_libdir}/lib*a
 %if ! %build_plf
-rm -f %buildroot%_libexecdir/xscreensaver/matrixview
-rm -f %buildroot%_mandir/man1/matrixview.1
-rm -f %buildroot%_datadir/xscreensaver/config/matrixview.xml
-rm -f %buildroot%_datadir/applnk/System/ScreenSavers/matrixview.desktop
+rm -f %{buildroot}%{_libexecdir}/xscreensaver/matrixview
+rm -f %{buildroot}%{_mandir}/man1/matrixview.1
+rm -f %{buildroot}%{_datadir}/xscreensaver/config/matrixview.xml
+rm -f %{buildroot}%{_datadir}/applnk/System/ScreenSavers/matrixview.desktop
 %endif
-for screensaver in %buildroot%_libdir/xscreensaver/*;
+for screensaver in %{buildroot}%{_libdir}/xscreensaver/*;
  do fgrep -q ELF $screensaver && chrpath -d $screensaver
 done
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
 %doc README*
-%_libexecdir/xscreensaver/*
-%_mandir/man1/*
-%_datadir/xscreensaver/config/*
-%_datadir/applnk/System/ScreenSavers/*
+%{_libexecdir}/xscreensaver/*
+%{_mandir}/man1/*
+%{_datadir}/xscreensaver/config/*
+%{_datadir}/applnk/System/ScreenSavers/*
 
 %if %build_plf
-%exclude %_libexecdir/xscreensaver/matrixview
-%exclude %_mandir/man1/matrixview.1*
-%exclude %_datadir/xscreensaver/config/matrixview.xml
-%exclude %_datadir/applnk/System/ScreenSavers/matrixview.desktop
+%exclude %{_libexecdir}/xscreensaver/matrixview
+%exclude %{_mandir}/man1/matrixview.1*
+%exclude %{_datadir}/xscreensaver/config/matrixview.xml
+%exclude %{_datadir}/applnk/System/ScreenSavers/matrixview.desktop
 %endif
 
 %if %build_plf
 %files matrixview
 %defattr(-,root,root)
 %doc README*
-%_libexecdir/xscreensaver/matrixview
-%_mandir/man1/matrixview.1*
-%_datadir/xscreensaver/config/matrixview.xml
-%_datadir/applnk/System/ScreenSavers/matrixview.desktop
+%{_libexecdir}/xscreensaver/matrixview
+%{_mandir}/man1/matrixview.1*
+%{_datadir}/xscreensaver/config/matrixview.xml
+%{_datadir}/applnk/System/ScreenSavers/matrixview.desktop
 %endif
 
 

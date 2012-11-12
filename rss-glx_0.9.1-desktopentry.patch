@@ -1,0 +1,299 @@
+diff -urN rss-glx_0.9.1/src/biof.desktop rss-glx_0.9.1-patched/src/biof.desktop
+--- rss-glx_0.9.1/src/biof.desktop	2009-05-19 12:44:15.000000000 +1100
++++ rss-glx_0.9.1-patched/src/biof.desktop	2011-09-09 18:00:20.135084190 +1100
+@@ -6,7 +6,8 @@
+ X-KDE-Category=OpenGL Screen Savers
+ X-KDE-Type=OpenGL
+ Type=Service
+-Actions=Setup;InWindow;Root
++Actions=Setup;InWindow;Root;
++OnlyShowIn=KDE;
+ Name=Biof (GL)
+ 
+ [Desktop Action Setup]
+diff -urN rss-glx_0.9.1/src/busyspheres.desktop rss-glx_0.9.1-patched/src/busyspheres.desktop
+--- rss-glx_0.9.1/src/busyspheres.desktop	2009-05-19 12:44:15.000000000 +1100
++++ rss-glx_0.9.1-patched/src/busyspheres.desktop	2011-09-09 18:00:23.856944691 +1100
+@@ -6,7 +6,8 @@
+ X-KDE-Category=OpenGL Screen Savers
+ X-KDE-Type=OpenGL
+ Type=Service
+-Actions=Setup;InWindow;Root
++Actions=Setup;InWindow;Root;
++OnlyShowIn=KDE;
+ Name=Busy Spheres (GL)
+ 
+ [Desktop Action Setup]
+diff -urN rss-glx_0.9.1/src/colorfire.desktop rss-glx_0.9.1-patched/src/colorfire.desktop
+--- rss-glx_0.9.1/src/colorfire.desktop	2009-05-19 12:44:15.000000000 +1100
++++ rss-glx_0.9.1-patched/src/colorfire.desktop	2011-09-09 18:00:33.636833075 +1100
+@@ -6,7 +6,8 @@
+ X-KDE-Category=OpenGL Screen Savers
+ X-KDE-Type=OpenGL
+ Type=Service
+-Actions=Setup;InWindow;Root
++Actions=Setup;InWindow;Root;
++OnlyShowIn=KDE;
+ Name=Colorfire (GL)
+ 
+ [Desktop Action Setup]
+diff -urN rss-glx_0.9.1/src/cyclone.desktop rss-glx_0.9.1-patched/src/cyclone.desktop
+--- rss-glx_0.9.1/src/cyclone.desktop	2009-05-19 12:44:15.000000000 +1100
++++ rss-glx_0.9.1-patched/src/cyclone.desktop	2011-09-09 18:01:03.773895847 +1100
+@@ -6,7 +6,8 @@
+ X-KDE-Category=OpenGL Screen Savers
+ X-KDE-Type=OpenGL
+ Type=Service
+-Actions=Setup;InWindow;Root
++Actions=Setup;InWindow;Root;
++OnlyShowIn=KDE;
+ Name=Cyclone (GL)
+ 
+ [Desktop Action Setup]
+diff -urN rss-glx_0.9.1/src/drempels.desktop rss-glx_0.9.1-patched/src/drempels.desktop
+--- rss-glx_0.9.1/src/drempels.desktop	2009-05-19 12:44:15.000000000 +1100
++++ rss-glx_0.9.1-patched/src/drempels.desktop	2011-09-09 18:01:09.500759724 +1100
+@@ -6,7 +6,8 @@
+ X-KDE-Category=OpenGL Screen Savers
+ X-KDE-Type=OpenGL
+ Type=Service
+-Actions=Setup;InWindow;Root
++Actions=Setup;InWindow;Root;
++OnlyShowIn=KDE;
+ Name=Drempels (GL)
+ 
+ [Desktop Action Setup]
+diff -urN rss-glx_0.9.1/src/euphoria.desktop rss-glx_0.9.1-patched/src/euphoria.desktop
+--- rss-glx_0.9.1/src/euphoria.desktop	2009-05-19 12:44:15.000000000 +1100
++++ rss-glx_0.9.1-patched/src/euphoria.desktop	2011-09-09 18:01:14.809411712 +1100
+@@ -6,7 +6,8 @@
+ X-KDE-Category=OpenGL Screen Savers
+ X-KDE-Type=OpenGL
+ Type=Service
+-Actions=Setup;InWindow;Root
++Actions=Setup;InWindow;Root;
++OnlyShowIn=KDE;
+ Name=Euphoria (GL)
+ 
+ [Desktop Action Setup]
+diff -urN rss-glx_0.9.1/src/feedback.desktop rss-glx_0.9.1-patched/src/feedback.desktop
+--- rss-glx_0.9.1/src/feedback.desktop	2009-05-19 12:44:15.000000000 +1100
++++ rss-glx_0.9.1-patched/src/feedback.desktop	2011-09-09 18:01:20.850431687 +1100
+@@ -6,7 +6,8 @@
+ X-KDE-Category=OpenGL Screen Savers
+ X-KDE-Type=OpenGL
+ Type=Service
+-Actions=Setup;InWindow;Root
++Actions=Setup;InWindow;Root;
++OnlyShowIn=KDE;
+ Name=Feedback (GL)
+ 
+ [Desktop Action Setup]
+diff -urN rss-glx_0.9.1/src/fieldlines.desktop rss-glx_0.9.1-patched/src/fieldlines.desktop
+--- rss-glx_0.9.1/src/fieldlines.desktop	2009-05-19 12:44:15.000000000 +1100
++++ rss-glx_0.9.1-patched/src/fieldlines.desktop	2011-09-09 18:01:30.513260442 +1100
+@@ -6,7 +6,8 @@
+ X-KDE-Category=OpenGL Screen Savers
+ X-KDE-Type=OpenGL
+ Type=Service
+-Actions=Setup;InWindow;Root
++Actions=Setup;InWindow;Root;
++OnlyShowIn=KDE;
+ Name=Fieldlines (GL)
+ 
+ [Desktop Action Setup]
+diff -urN rss-glx_0.9.1/src/flocks.desktop rss-glx_0.9.1-patched/src/flocks.desktop
+--- rss-glx_0.9.1/src/flocks.desktop	2009-05-19 12:44:15.000000000 +1100
++++ rss-glx_0.9.1-patched/src/flocks.desktop	2011-09-09 18:01:35.679843506 +1100
+@@ -6,7 +6,8 @@
+ X-KDE-Category=OpenGL Screen Savers
+ X-KDE-Type=OpenGL
+ Type=Service
+-Actions=Setup;InWindow;Root
++Actions=Setup;InWindow;Root;
++OnlyShowIn=KDE;
+ Name=Flocks (GL)
+ 
+ [Desktop Action Setup]
+diff -urN rss-glx_0.9.1/src/flux.desktop rss-glx_0.9.1-patched/src/flux.desktop
+--- rss-glx_0.9.1/src/flux.desktop	2009-05-19 12:44:15.000000000 +1100
++++ rss-glx_0.9.1-patched/src/flux.desktop	2011-09-09 18:01:40.952478549 +1100
+@@ -6,7 +6,8 @@
+ X-KDE-Category=OpenGL Screen Savers
+ X-KDE-Type=OpenGL
+ Type=Service
+-Actions=Setup;InWindow;Root
++Actions=Setup;InWindow;Root;
++OnlyShowIn=KDE;
+ Name=Flux (GL)
+ 
+ [Desktop Action Setup]
+diff -urN rss-glx_0.9.1/src/helios.desktop rss-glx_0.9.1-patched/src/helios.desktop
+--- rss-glx_0.9.1/src/helios.desktop	2009-05-19 12:44:15.000000000 +1100
++++ rss-glx_0.9.1-patched/src/helios.desktop	2011-09-09 18:01:46.485244123 +1100
+@@ -6,7 +6,8 @@
+ X-KDE-Category=OpenGL Screen Savers
+ X-KDE-Type=OpenGL
+ Type=Service
+-Actions=Setup;InWindow;Root
++Actions=Setup;InWindow;Root;
++OnlyShowIn=KDE;
+ Name=Helios (GL)
+ 
+ [Desktop Action Setup]
+diff -urN rss-glx_0.9.1/src/hufo_smoke.desktop rss-glx_0.9.1-patched/src/hufo_smoke.desktop
+--- rss-glx_0.9.1/src/hufo_smoke.desktop	2009-05-19 12:44:15.000000000 +1100
++++ rss-glx_0.9.1-patched/src/hufo_smoke.desktop	2011-09-09 18:01:50.956478795 +1100
+@@ -6,7 +6,8 @@
+ X-KDE-Category=OpenGL Screen Savers
+ X-KDE-Type=OpenGL
+ Type=Service
+-Actions=Setup;InWindow;Root
++Actions=Setup;InWindow;Root;
++OnlyShowIn=KDE;
+ Name=Hufo's Smoke (GL)
+ 
+ [Desktop Action Setup]
+diff -urN rss-glx_0.9.1/src/hufo_tunnel.desktop rss-glx_0.9.1-patched/src/hufo_tunnel.desktop
+--- rss-glx_0.9.1/src/hufo_tunnel.desktop	2009-05-19 12:44:15.000000000 +1100
++++ rss-glx_0.9.1-patched/src/hufo_tunnel.desktop	2011-09-09 18:01:55.455727581 +1100
+@@ -6,7 +6,8 @@
+ X-KDE-Category=OpenGL Screen Savers
+ X-KDE-Type=OpenGL
+ Type=Service
+-Actions=Setup;InWindow;Root
++Actions=Setup;InWindow;Root;
++OnlyShowIn=KDE;
+ Name=Hufo's Tunnel (GL)
+ 
+ [Desktop Action Setup]
+diff -urN rss-glx_0.9.1/src/hyperspace.desktop rss-glx_0.9.1-patched/src/hyperspace.desktop
+--- rss-glx_0.9.1/src/hyperspace.desktop	2009-05-19 12:44:15.000000000 +1100
++++ rss-glx_0.9.1-patched/src/hyperspace.desktop	2011-09-09 18:02:00.363180563 +1100
+@@ -6,7 +6,8 @@
+ X-KDE-Category=OpenGL Screen Savers
+ X-KDE-Type=OpenGL
+ Type=Service
+-Actions=Setup;InWindow;Root
++Actions=Setup;InWindow;Root;
++OnlyShowIn=KDE;
+ Name=Hyperspace (GL)
+ 
+ [Desktop Action Setup]
+diff -urN rss-glx_0.9.1/src/lattice.desktop rss-glx_0.9.1-patched/src/lattice.desktop
+--- rss-glx_0.9.1/src/lattice.desktop	2009-05-19 12:44:15.000000000 +1100
++++ rss-glx_0.9.1-patched/src/lattice.desktop	2011-09-09 18:02:04.888442836 +1100
+@@ -6,7 +6,8 @@
+ X-KDE-Category=OpenGL Screen Savers
+ X-KDE-Type=OpenGL
+ Type=Service
+-Actions=Setup;InWindow;Root
++Actions=Setup;InWindow;Root;
++OnlyShowIn=KDE;
+ Name=Lattice (GL)
+ 
+ [Desktop Action Setup]
+diff -urN rss-glx_0.9.1/src/lorenz.desktop rss-glx_0.9.1-patched/src/lorenz.desktop
+--- rss-glx_0.9.1/src/lorenz.desktop	2009-05-19 12:44:15.000000000 +1100
++++ rss-glx_0.9.1-patched/src/lorenz.desktop	2011-09-09 18:02:12.881437352 +1100
+@@ -6,7 +6,8 @@
+ X-KDE-Category=OpenGL Screen Savers
+ X-KDE-Type=OpenGL
+ Type=Service
+-Actions=Setup;InWindow;Root
++Actions=Setup;InWindow;Root;
++OnlyShowIn=KDE;
+ Name=Lorenz (GL)
+ 
+ [Desktop Action Setup]
+diff -urN rss-glx_0.9.1/src/matrixview.desktop rss-glx_0.9.1-patched/src/matrixview.desktop
+--- rss-glx_0.9.1/src/matrixview.desktop	2009-05-19 12:44:15.000000000 +1100
++++ rss-glx_0.9.1-patched/src/matrixview.desktop	2011-09-09 18:02:17.965978677 +1100
+@@ -6,7 +6,8 @@
+ X-KDE-Category=OpenGL Screen Savers
+ X-KDE-Type=OpenGL
+ Type=Service
+-Actions=Setup;InWindow;Root
++Actions=Setup;InWindow;Root;
++OnlyShowIn=KDE;
+ Name=MatrixView (GL)
+ 
+ [Desktop Action Setup]
+diff -urN rss-glx_0.9.1/src/pixelcity.desktop rss-glx_0.9.1-patched/src/pixelcity.desktop
+--- rss-glx_0.9.1/src/pixelcity.desktop	2010-01-05 13:18:18.000000000 +1000
++++ rss-glx_0.9.1-patched/src/pixelcity.desktop	2011-09-09 18:02:23.144566213 +1100
+@@ -6,7 +6,8 @@
+ X-KDE-Category=OpenGL Screen Savers
+ X-KDE-Type=OpenGL
+ Type=Service
+-Actions=Setup;InWindow;Root
++Actions=Setup;InWindow;Root;
++OnlyShowIn=KDE;
+ Name=Drempels (GL)
+ 
+ [Desktop Action Setup]
+diff -urN rss-glx_0.9.1/src/plasma.desktop rss-glx_0.9.1-patched/src/plasma.desktop
+--- rss-glx_0.9.1/src/plasma.desktop	2009-05-19 12:44:15.000000000 +1100
++++ rss-glx_0.9.1-patched/src/plasma.desktop	2011-09-09 18:02:27.923955899 +1100
+@@ -6,7 +6,8 @@
+ X-KDE-Category=OpenGL Screen Savers
+ X-KDE-Type=OpenGL
+ Type=Service
+-Actions=Setup;InWindow;Root
++Actions=Setup;InWindow;Root;
++OnlyShowIn=KDE;
+ Name=Plasma (GL)
+ 
+ [Desktop Action Setup]
+diff -urN rss-glx_0.9.1/src/skyrocket.desktop rss-glx_0.9.1-patched/src/skyrocket.desktop
+--- rss-glx_0.9.1/src/skyrocket.desktop	2009-05-19 12:44:15.000000000 +1100
++++ rss-glx_0.9.1-patched/src/skyrocket.desktop	2011-09-09 18:02:32.867424963 +1100
+@@ -6,7 +6,8 @@
+ X-KDE-Category=OpenGL Screen Savers
+ X-KDE-Type=OpenGL
+ Type=Service
+-Actions=Setup;InWindow;Root
++Actions=Setup;InWindow;Root;
++OnlyShowIn=KDE;
+ Name=Skyrocket (GL)
+ 
+ [Desktop Action Setup]
+diff -urN rss-glx_0.9.1/src/solarwinds.desktop rss-glx_0.9.1-patched/src/solarwinds.desktop
+--- rss-glx_0.9.1/src/solarwinds.desktop	2009-05-19 12:44:15.000000000 +1100
++++ rss-glx_0.9.1-patched/src/solarwinds.desktop	2011-09-09 18:02:38.839413108 +1100
+@@ -6,7 +6,8 @@
+ X-KDE-Category=OpenGL Screen Savers
+ X-KDE-Type=OpenGL
+ Type=Service
+-Actions=Setup;InWindow;Root
++Actions=Setup;InWindow;Root;
++OnlyShowIn=KDE;
+ Name=Solarwinds (GL)
+ 
+ [Desktop Action Setup]
+diff -urN rss-glx_0.9.1/src/spirographx.desktop rss-glx_0.9.1-patched/src/spirographx.desktop
+--- rss-glx_0.9.1/src/spirographx.desktop	2009-05-19 12:44:15.000000000 +1100
++++ rss-glx_0.9.1-patched/src/spirographx.desktop	2011-09-09 18:02:42.960471401 +1100
+@@ -6,7 +6,8 @@
+ X-KDE-Category=OpenGL Screen Savers
+ X-KDE-Type=OpenGL
+ Type=Service
+-Actions=Setup;InWindow;Root
++Actions=Setup;InWindow;Root;
++OnlyShowIn=KDE;
+ Name=SpirographX (GL)
+ 
+ [Desktop Action Setup]
+diff -urN rss-glx_0.9.1/src/sundancer2.desktop rss-glx_0.9.1-patched/src/sundancer2.desktop
+--- rss-glx_0.9.1/src/sundancer2.desktop	2009-05-19 12:44:15.000000000 +1100
++++ rss-glx_0.9.1-patched/src/sundancer2.desktop	2011-09-09 18:02:47.847913644 +1100
+@@ -6,7 +6,8 @@
+ X-KDE-Category=OpenGL Screen Savers
+ X-KDE-Type=OpenGL
+ Type=Service
+-Actions=Setup;InWindow;Root
++Actions=Setup;InWindow;Root;
++OnlyShowIn=KDE;
+ Name=Sundancer2 (GL)
+ 
+ [Desktop Action Setup]

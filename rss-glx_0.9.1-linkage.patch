@@ -1,0 +1,12 @@
+diff -urN rss-glx_0.9.1/src/Makefile.in rss-glx_0.9.1-patched/src/Makefile.in
+--- rss-glx_0.9.1/src/Makefile.in	2010-01-05 12:59:19.000000000 +1000
++++ rss-glx_0.9.1-patched/src/Makefile.in	2012-11-24 01:39:48.692123355 +1100
+@@ -614,7 +614,7 @@
+ 	$(matrixview_LINK) $(matrixview_OBJECTS) $(matrixview_LDADD) $(LIBS)
+ pixelcity$(EXEEXT): $(pixelcity_OBJECTS) $(pixelcity_DEPENDENCIES) 
+ 	@rm -f pixelcity$(EXEEXT)
+-	$(LINK) $(pixelcity_OBJECTS) $(pixelcity_LDADD) $(LIBS)
++	$(LINK) $(pixelcity_OBJECTS) $(pixelcity_LDADD) $(LIBS) -lstdc++ -lGLC
+ plasma$(EXEEXT): $(plasma_OBJECTS) $(plasma_DEPENDENCIES) 
+ 	@rm -f plasma$(EXEEXT)
+ 	$(CXXLINK) $(plasma_OBJECTS) $(plasma_LDADD) $(LIBS)

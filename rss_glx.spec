@@ -13,7 +13,7 @@
 Summary:	Really Slick Screensavers Port to GLX
 Name:		rss_glx
 Version:	0.9.1
-Release:	2%{?extrarelsuffix}
+Release:	3%{?extrarelsuffix}
 Epoch:		1
 License:	GPLv2
 Group:		Graphical desktop/Other

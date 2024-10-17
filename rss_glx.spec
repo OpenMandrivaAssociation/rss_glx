@@ -17,7 +17,7 @@ Release:	3%{?extrarelsuffix}
 Epoch:		1
 License:	GPLv2
 Group:		Graphical desktop/Other
-URL:		http://rss-glx.sourceforge.net/
+URL:		https://rss-glx.sourceforge.net/
 Source0:	%{fname}.tar.bz2
 Patch0:		rss-glx_0.9.1-linkage.patch
 Patch1:		rss-glx_0.9.1-desktopentry.patch
